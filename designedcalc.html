@@ -8,10 +8,10 @@ function calc(){
 var n1=parseFloat(document.getElementById("n1").value);
 var n2=parseFloat(document.getElementById("n2").value);
 var oper=document.getElementById("operators").value;
- var pie=22/7;
+var pie=22/7;
  
  
- if(oper==="+"){
+if(oper==="+"){
      document.getElementById("result").value=n1+n2;
      }
  
@@ -27,7 +27,7 @@ if(oper==="÷"){
     document.getElementById("result").value=n1/n2;
     }
 
- if(oper==="sqre"){
+if(oper==="sqre"){
      document.getElementById("result").value=n1*n1;
      }
 if(oper==="cube"){
@@ -50,7 +50,7 @@ if(oper==="pie"){
 <title></title>
 </head>
 <body>
-<div class="yyy">
+<div class="box">
 <div class="color"><h1>Calculator</h1></div>
 <div type="container" class="hh">
 <label>First Number </label><br>
@@ -75,8 +75,7 @@ if(oper==="pie"){
 <input type="number" id="result" value=""><br><hr color="lime">
  </div></div>
  <style type="text/css">
- 
- 
+
  body{
  
  padding:0;
@@ -84,9 +83,6 @@ if(oper==="pie"){
  background-color:#00FFFF;
  text-align:center;
  }
- 
-
-
 div.color{
 
 background-color:blue;
@@ -103,7 +99,7 @@ width:200px;
 background-color:red;
 }
  
- div.yyy{
+ div.box{
  
 text-align:center;
 
@@ -118,11 +114,7 @@ border-color:lime;
  
  }
  label{
- color:gold;
- 
- 
- 
- 
+ color:gold; 
  }
 
  </style>
