@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+function calc(){
+
+var n1=parseFloat(document.getElementById("n1").value);
+var n2=parseFloat(document.getElementById("n2").value);
+var oper=document.getElementById("operators").value;
+ var pie=22/7;
+ 
+ 
+ if(oper==="+"){
+     document.getElementById("result").value=n1+n2;
+     }
+ 
+if(oper==="-"){
+    document.getElementById("result").value=n1-n2;
+    }
+ 
+if(oper==="*"){
+    document.getElementById("result").value=n1*n2;
+    }
+ 
+if(oper==="÷"){
+    document.getElementById("result").value=n1/n2;
+    }
+
+ if(oper==="sqre"){
+     document.getElementById("result").value=n1*n1;
+     }
+if(oper==="cube"){
+    document.getElementById("result").value=n1*n1*n1;
+    }
+if(oper==="pie"){
+    document.getElementById("result").value=n1*pie;
+    }
+    if(oper==="ff"){
+        document.getElementById("result").value=n1-n1+n2-n2;
+        document.getElementById("n2").value=n2-n2;
+        document.getElementById("n1").value=n1-n1;
+    }
+}
+
+
+
+
+</script>
+<title></title>
+</head>
+<body>
+<div class="yyy">
+<div class="color"><h1>Calculator</h1></div>
+<div type="container" class="hh">
+<label>First Number </label><br>
+ <input type="number" id="n1" value=""/><br><hr>
+ <label>Second Number</label><br>
+
+ <input type="number" id="n2" value=""><br><hr>
+ <select id="operators">
+ 
+ <option value="+">+</option>
+  <option value="-">-</option>
+   <option value="*">×</option>
+    <option value="÷">÷</option>
+     <option value="sqre">square</option>
+      <option value="cube">cube</option>
+       <option value="pie">π(pie) </option>
+        <option value="ff">AC</option>
+ </select>
+ 
+ <button onclick="calc()">=</button><br><hr>
+<label>Result</label><br>
+<input type="number" id="result" value=""><br><hr color="lime">
+ </div></div>
+ <style type="text/css">
+ 
+ 
+ body{
+ 
+ padding:0;
+ margin:0;
+ background-color:#00FFFF;
+ text-align:center;
+ }
+ 
+
+
+div.color{
+
+background-color:blue;
+text-align:center;
+color:rgba(200,200,200);
+border-radius:10%;
+}
+div{
+
+
+text-align:center;
+width:200px;
+
+background-color:red;
+}
+ 
+ div.yyy{
+ 
+text-align:center;
+
+ }
+ input{
+  
+border-color:lime;
+ border-radius:10%;
+ color:blue;
+ font-weight:bold;
+ opacity:100%;
+ 
+ }
+ label{
+ color:gold;
+ 
+ 
+ 
+ 
+ }
+
+ </style>
+ 
+</body>
+</html>
