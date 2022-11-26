@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<script type="text/javascript">
+
+function calc(){
+
+
+var oper=document.getElementById("operators").value;
+var q=parseFloat(document.getElementById("Q").value);
+var eqm=parseFloat(document.getElementById("EQM").value);
+var emn=parseFloat(document.getElementById("ENM").value);
+var ca=parseFloat(document.getElementById("CA").value);
+var wa=parseFloat(document.getElementById("WA").value);
+var ql=parseFloat(document.getElementById("QL").value);
+var tt=parseFloat(document.getElementById("TT").value);
+var tp=parseFloat(document.getElementById("TP").value);
+
+
+
+var sum=wa+ca;
+var left=q-sum;
+var total=q*eqm;
+var lognet=emn+eqm;
+var neg=wa*lognet;
+var leftmark=left*eqm;
+
+
+var score=total-neg-leftmark;
+var cent=score*100;
+var perce=cent/total;
+
+
+
+
+
+
+if(oper==="Get"){
+   
+    document.getElementById("QL").value=left;
+    
+
+    document.getElementById("TT").value=score;
+    
+
+    document.getElementById("TP").value=perce;
+    
+    }
+    if(oper==="Clear"){
+    document.getElementById("Q").value=null;
+    document.getElementById("TT").value=null;
+    document.getElementById("TP").value=null;
+    document.getElementById("QL").value=null;
+    document.getElementById("CA").value=null;
+    document.getElementById("WA").value=null;
+    document.getElementById("ENM").value=null;
+    document.getElementById("EQM").value=null;
+
+    
+
+}
+}
+</script>
+
+
+
+<title></title>
+</head>
+<body>
+<div class="box">
+<div class="color"><h1 style="font-size:20px;">MarksCalculator</h1></div>
+<div type="container" class="new">
+
+
+
+</h1>
+
+
+<label>Number of Questions</label><br>
+ <input type="number" id="Q" value=""/><br><hr>
+ 
+ 
+ <label>Each questions marks</label><br>
+ <input type="number" id="EQM"/><br><hr>
+ 
+ 
+ <label>Each negative marks</label><br>
+ <input type="number" id="ENM" value=""/><br><hr>
+ 
+ 
+ <label>Correct Attemp</label><br>
+ <input type="number" id="CA" value=""/><br><hr>
+ 
+ <label>Wrong Attemp</label><br>
+ <input type="number" id="WA" value=""/><br><hr>
+ 
+ 
+ 
+  <button onclick="calc()">SEE RESULT</button>
+  
+  <select id="operators">
+  
+  <option value="Get">Fill
+   </option>
+  <option value="Clear">Clear</option>
+  
+  </select>
+  
+  <br><hr>
+  
+  <label>Questons Left</label><br>
+  <input type="number" id="QL" value=""/><br><hr>
+ 
+ <label>Total Marks</label><br>
+ <input type="number" id="TT" value=""/><br><hr>
+ 
+ <label>Percentage</label><br>
+ <input type="number" id="TP" value=""/><br><hr>
+
+</label></div>
+
+<style type="text/css">
+
+
+
+body{
+
+padding:0;
+margin:0;
+background-color:#00FFFF;
+text-align:center;
+}
+div.color{
+
+background-color:blue;
+text-align:center;
+color:rgba(200,200,200);
+border-radius:10%;
+}
+div{
+
+
+text-align:center;
+width:200px;
+
+background-color:red;
+}
+
+div.box{
+
+text-align:center;
+
+}
+input{
+ 
+border-color:lime;
+border-radius:10%;
+color:blue;
+font-weight:bold;
+opacity:100%;
+
+}
+label{
+color:gold; 
+}
+
+
+
+
+
+</style>
+
+
+</body>
+</html>
